@@ -1,9 +1,8 @@
 # Twitch Point Farmer
 
-![Code Quality](https://img.shields.io/codefactor/grade/github/Darkempire78/Twitch-Point-Farmer?style=for-the-badge)
-![Repository Size](https://img.shields.io/github/repo-size/Darkempire78/Twitch-Point-Farmer?style=for-the-badge)
+![Repository Size](https://img.shields.io/github/repo-size/Mephisto-Grumpy/twitch-point-farmer?style=for-the-badge)
 ![Sourcery](https://img.shields.io/badge/SOURCERY-ENABLED-green?style=for-the-badge)
-![License](https://img.shields.io/github/license/Darkempire78/Twitch-Point-Farmer?style=for-the-badge)
+![License](https://img.shields.io/github/license/Mephisto-Grumpy/twitch-point-farmer?style=for-the-badge)
 
 Automatically collect channel points for your favorite Twitch streamers.
 
