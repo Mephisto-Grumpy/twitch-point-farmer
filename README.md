@@ -36,10 +36,10 @@ Automatically collect channel points for your favorite Twitch streamers.
 
 > [!NOTE]
 > To get the `auth-token` cookie, you can also use the following JavaScript code in the browser console:
-
-```javascript
-document.cookie.match(/auth-token=([^;]+)/)[1]
-```
+>
+> ```javascript
+> document.cookie.match(/auth-token=([^;]+)/)[1]
+> ```
 
 4. Rename `config.example.json` to `config.json` and fill in your details:
 
