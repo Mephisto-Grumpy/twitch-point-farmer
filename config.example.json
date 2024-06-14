@@ -1,7 +1,8 @@
 {
-    "chromeDriverPath": "",
-    "authTokenCookie": "",
-    "streamers": [],
-    "hideTheBot": true,
-    "logs": true
+  "browser": "chrome",
+  "driverPath": "",
+  "authTokenCookie": "",
+  "streamers": [],
+  "hideTheBot": true,
+  "logs": true
 }

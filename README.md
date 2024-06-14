@@ -1,64 +1,69 @@
 # Twitch Point Farmer
 
-![](https://img.shields.io/codefactor/grade/github/Darkempire78/Twitch-Point-Farmer?style=for-the-badge) ![](https://img.shields.io/github/repo-size/Darkempire78/Twitch-Point-Farmer?style=for-the-badge) ![](https://img.shields.io/badge/SOURCERY-ENABLED-green?style=for-the-badge) <a href="https://discord.com/invite/sPvJmY7mcV"><img src="https://img.shields.io/discord/831524351311609907?color=%237289DA&label=DISCORD&style=for-the-badge"></a>
+![Code Quality](https://img.shields.io/codefactor/grade/github/Darkempire78/Twitch-Point-Farmer?style=for-the-badge)
+![Repository Size](https://img.shields.io/github/repo-size/Darkempire78/Twitch-Point-Farmer?style=for-the-badge)
+![Sourcery](https://img.shields.io/badge/SOURCERY-ENABLED-green?style=for-the-badge)
+![License](https://img.shields.io/github/license/Darkempire78/Twitch-Point-Farmer?style=for-the-badge)
 
-Automatically collects channel points for your favorite streamers.
+Automatically collect channel points for your favorite Twitch streamers.
+
+> [**NOTE**]
+> This script is for educational purposes only. Use it at your own risk.
+
+> [**WARNING**]
+> Cannot clicking on collect points (Active watching)
 
 ## Installation
 
-* Install all dependencies : ``pip install -r requirements.txt``.
-* Download [Chromedriver](https://chromedriver.chromium.org/downloads).
-* Get your Twitch authentication cookie (auth-token).
-* Edit `config.example.json`:
+1. Install dependencies:
 
-```Javascript
-{
-    "chromeDriverPath": "", // Set the path of the chromedriver
-    "authTokenCookie": "", // Paste the content of your Twitch authentication cookie (auth-token)
-    "streamers": [], // Put a list of your streamers to farm in order of preference (ex: ["streamerName1", "streamerName2", ...])
-    "hideTheBot" true, // true = hide the bot, false = see the bot working
-    "logs": true // true = log every bot's actions, false = do not log bot's actions
-}
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Download [Chromedriver](https://chromedriver.chromium.org/downloads) or [Geckodriver](https://github.com/mozilla/geckodriver) and add it to your system's `PATH`:
+
+   - **Windows**: Add the directory containing `chromedriver.exe` to your `PATH`.
+   - **Linux**: Move `chromedriver` to `/usr/local/bin/` or `/usr/bin/`.
+
+3. Obtain your Twitch authentication cookie (`auth-token`):
+
+   - Go to Twitch and log in.
+   - Follow instructions to retrieve the `auth-token` cookie:
+     - **Chrome**: Go to `chrome://settings/cookies/detail?site=twitch.tv`.
+     - **Firefox**: Use Developer Tools (`Ctrl+Shift+I` or `F12`), go to Storage tab > Cookies > `https://www.twitch.tv`.
+   - Copy the value of the `auth-token` cookie.
+
+> [**NOTE**]
+> To get the `auth-token` cookie, you can also use the following JavaScript code in the browser console:
+
+```javascript
+document.cookie.match(/auth-token=([^;]+)/)[1]
 ```
 
-* Rename it to `config.json`.
+4. Rename `config.example.json` to `config.json` and fill in your details:
 
-Finally, launch the script.
+   ```json
+   {
+     "browser": "chrome", // or "firefox"
+     "driverPath": "", // path to chromedriver or geckodriver
+     "authTokenCookie": "", // Twitch auth-token cookie
+     "streamers": [], // list of streamers to watch
+     "hideTheBot": true, // hide the bot in the viewer list
+     "logs": true // enable logging
+   }
+   ```
 
-## Get your Twitch authentication cookie (auth-token).
-
-* Go to `settings` (`advanced settings` for some browsers)
-* Go to `privacy and security`
-* Click on `cookies and other site data`
-* Click on `set cookies and site data`
-* Search for twitch.tv
-* Click on the coupon and retrieve the contents of the cookie named `auth-token`
-
-Shortcut for main browsers:
-
-**Chrome:** `chrome://settings/cookies/detail?site=twitch.tv`
-
-**Brave:** `brave://settings/cookies/detail?site=twitch.tv`
-
-### Firefox
-
-* Go to `https://www.twitch.tv/`
-* Open the Dev Tools (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> or <kbd>F12</kbd>)
-* Go to the Storage tab
-* Click on `Cookies` then `https://www.twitch.tv`
-* Copy the content of the cookie named `auth-token`
+5. Launch the script:
+   ```bash
+   python main.py
+   ```
 
 ## Features
 
-* Collect points (every 5 minutes) (+10pts)
-* Recover the drops (+50pts)
-* Watch serial streams (+450pts)
-
-## Discord
-
-Join the Discord server !
-
-[![](https://i.imgur.com/UfyvtOL.png)](https://discord.gg/sPvJmY7mcV)
+- Automatically collects points every 5 minutes (+10pts).
+- Retrieves drops (+50pts).
+- Watches consecutive streams (+450pts).
 
 ## Contributing
 
@@ -68,4 +73,18 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-This project is under [GPLv3](https://github.com/Darkempire78/Raid-Protect-Discord-Bot/blob/master/LICENSE).
+This project is licensed under the [GPLv3 License](LICENSE).
+
+## Owner
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Darkempire78">
+        <img src="https://avatars.githubusercontent.com/u/50015928" width="100px;" alt="Darkempire78"/>
+        <br />
+        <sub><b>Darkempire78</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>

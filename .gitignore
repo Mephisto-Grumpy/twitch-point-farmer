@@ -1,3 +1,10 @@
-config.json
+# Driver
 chromedriver.exe
 chromedriver
+
+# Configuration
+config.json
+
+# Environment
+.env
+.venv
