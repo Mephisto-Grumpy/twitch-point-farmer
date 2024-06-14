@@ -7,10 +7,10 @@
 
 Automatically collect channel points for your favorite Twitch streamers.
 
-> [**NOTE**]
+> [!NOTE]
 > This script is for educational purposes only. Use it at your own risk.
 
-> [**WARNING**]
+> [!WARNING]
 > Cannot clicking on collect points (Active watching)
 
 ## Installation
@@ -34,7 +34,7 @@ Automatically collect channel points for your favorite Twitch streamers.
      - **Firefox**: Use Developer Tools (`Ctrl+Shift+I` or `F12`), go to Storage tab > Cookies > `https://www.twitch.tv`.
    - Copy the value of the `auth-token` cookie.
 
-> [**NOTE**]
+> [!NOTE]
 > To get the `auth-token` cookie, you can also use the following JavaScript code in the browser console:
 
 ```javascript
